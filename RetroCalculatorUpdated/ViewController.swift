@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     @IBAction func onNumberPressed(sender: UIButton) {
         
         runningNumber = runningNumber + "\(sender.tag)"
-        outputLbl.text = runningNumber
+        outputLbl.text = runningNumber 
         playSound()
         
     }
@@ -114,9 +114,12 @@ class ViewController: UIViewController {
             currentOperation = op
         } else {
             
+                currentOperation = Operation.Empty
             leftValStr = runningNumber
             runningNumber = ""
+            
             currentOperation = op
+            
         }
         playSound()
     }
